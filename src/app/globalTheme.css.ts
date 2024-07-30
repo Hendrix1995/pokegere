@@ -1,54 +1,36 @@
-import { assignVars, createGlobalTheme, createGlobalThemeContract, globalStyle } from "@vanilla-extract/css";
+import { createGlobalTheme, createGlobalThemeContract, globalStyle } from "@vanilla-extract/css";
 
 export const global = createGlobalThemeContract({
-  background: {
-    color: "bg-color",
-  },
-  foreground: {
-    color: "fg-color",
+  color: {
+    1: "green-1",
+    2: "green-2",
+    3: "green-3",
   },
 });
+
 createGlobalTheme(":root", global, {
-  background: {
-    color: "rgb(255, 255, 255)",
-  },
-  foreground: {
-    color: "rgb(0, 0, 0)",
-  },
-});
-const darkGlobalTheme = {
-  background: {
-    color: "rgb(0, 0, 0)",
-  },
-  foreground: {
-    color: "rgb(255, 255, 255)",
-  },
-};
-globalStyle(":root", {
-  "@media": {
-    "(prefers-color-scheme: dark)": {
-      vars: assignVars(global, darkGlobalTheme),
-    },
+  color: {
+    1: "#95CFB2",
+    2: "#2FC982",
+    3: "#1F9058",
   },
 });
+
 globalStyle("*", {
   boxSizing: "border-box",
   padding: 0,
   margin: 0,
 });
-globalStyle("html", {
-  "@media": {
-    "(prefers-color-scheme: dark)": {
-      colorScheme: "dark",
-    },
-  },
-});
 globalStyle("html, body", {
   maxWidth: "100dvw",
   overflowX: "hidden",
+  background: global.color[3],
 });
 globalStyle("body", {
-  color: global.foreground.color,
+  color: "black",
+});
+globalStyle("ul", {
+  listStyle: "none",
 });
 globalStyle("a", {
   color: "inherit",

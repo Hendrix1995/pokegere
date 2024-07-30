@@ -1,7 +1,9 @@
+import Main from "./_component/Main";
+
 export default function Home() {
   return (
     <main>
-      <div>hello would!</div>
+      <Main />
     </main>
   );
 }
