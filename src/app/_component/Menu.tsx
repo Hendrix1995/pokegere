@@ -1,17 +1,20 @@
+import Image from "next/image";
 import * as styles from "./main.css";
+import Link from "next/link";
 
 interface MenuProps {
   title: string;
-  icon: string;
+  icon: any;
+  link: string;
 }
 
-const Menu = ({ title, icon }: MenuProps) => {
+const Menu = ({ title, icon, link }: MenuProps) => {
   return (
     <li className={styles.menu}>
-      <a>
-        <div className={styles.IconBox}>{icon}</div>
+      <Link href={link}>
+        <Image className={styles.IconBox} src={icon} alt={icon} />
         <div>{title}</div>
-      </a>
+      </Link>
     </li>
   );
 };

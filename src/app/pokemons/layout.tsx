@@ -1,15 +1,11 @@
 import type { Metadata } from "next";
-import { IBM_Plex_Sans_KR } from "next/font/google";
-import "./globalTheme.css";
-
-const ibm_plex_sans_kr = IBM_Plex_Sans_KR({ weight: "400", subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "PokéGere",
   description: "PokéRogue Tool",
 };
 
-export default function RootLayout({
+export default function PokemonsLayout({
   children,
   modal,
 }: Readonly<{
@@ -18,8 +14,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={ibm_plex_sans_kr.className}>
-        홈 레이아웃
+      <body>
+        포켓몬 리스트 레이아웃
         {children}
         {modal}
       </body>
