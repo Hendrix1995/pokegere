@@ -19,7 +19,6 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={ibm_plex_sans_kr.className}>
-        홈 레이아웃
         {children}
         {modal}
       </body>

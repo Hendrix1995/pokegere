@@ -15,7 +15,6 @@ export default function PokemonsLayout({
   return (
     <html lang='en'>
       <body>
-        포켓몬 리스트 레이아웃
         {children}
         {modal}
       </body>

@@ -1,5 +1,5 @@
 const Page = () => {
-  return "페러렐 모달";
+  return <div>페러렐 모달</div>;
 };
 
 export default Page;
