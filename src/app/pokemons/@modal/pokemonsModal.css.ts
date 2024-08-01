@@ -18,6 +18,7 @@ export const container = style({
   transform: "translateX(-50%)",
   display: "flex",
   flexDirection: "column",
+  gap: 12,
   borderRadius: 12,
   background: "#f2f2f2",
   padding: 16,

@@ -1,4 +1,5 @@
 import ModalHeader from "../_component/ModalHeader";
+import SearchInput from "../_component/SearchInput";
 import * as styles from "./pokemonsModal.css";
 
 const PokemonsModal = () => {
@@ -6,7 +7,7 @@ const PokemonsModal = () => {
     <div className={styles.backdrop}>
       <div className={styles.container}>
         <ModalHeader />
-        <div>검색인풋</div>
+        <SearchInput />
         <div>
           <div>이미지</div>
           <div>
