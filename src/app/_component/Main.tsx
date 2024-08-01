@@ -4,12 +4,12 @@ import Menu from "./Menu";
 
 const MENU_LIST = [
   [
-    { name: "도감", icon: iconDex, link: "/list" },
-    { name: "포켓몬", icon: iconPokeBall, link: "/pokemons" },
+    { name: "List", icon: iconDex, link: "/list" },
+    { name: "Pokémons", icon: iconPokeBall, link: "/pokemons" },
   ],
   [
-    { name: "라이벌", icon: iconIdentificationCard, link: "/rival" },
-    { name: "바이옴", icon: iconTownMap, link: "/locations" },
+    { name: "Rival", icon: iconIdentificationCard, link: "/rival" },
+    { name: "Locations", icon: iconTownMap, link: "/locations" },
   ],
 ];
 
